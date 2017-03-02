@@ -1,4 +1,4 @@
-package com.bakigoal.shapes2d;
+package com.bakigoal.text;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
