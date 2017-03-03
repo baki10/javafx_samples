@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?language javascript?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          alignment="center" hgap="10" vgap="10" styleClass="root">
+  <!--<fx:script>-->
+    <!--function handleSubmitButtonAction() {-->
+      <!--actionTarget.setText("Calling the JavaScript");-->
+    <!--}-->
+  <!--</fx:script>-->
+  <fx:script source="js/buttonHandler.js"/>
+
+  <padding>
+    <Insets top="25" right="25" bottom="10" left="25"/>
+  </padding>
+  <!--<gridLinesVisible>true</gridLinesVisible>-->
+
+  <Text id="welcome-text" text="Welcome" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+  <!--username-->
+  <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+  <!--password-->
+  <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+  <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+  <!--button-->
+  <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="1" GridPane.rowIndex="4">
+    <Button text="Sign In" onAction="handleSubmitButtonAction(event);"/>
+  </HBox>
+  <Text fx:id="actionTarget" GridPane.columnIndex="0" GridPane.columnSpan="2"
+        GridPane.halignment="RIGHT" GridPane.rowIndex="6"/>
+
+  <stylesheets>
+    <URL value="@style/Login.css" />
+  </stylesheets>
+</GridPane>
